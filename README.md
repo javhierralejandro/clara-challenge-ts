@@ -98,6 +98,9 @@ npx allure generate allure-results --clean
 npx allure open
 ```
 
+## 📽️ Demo
+Here is a demo of the tests running: [See Clara Challenge Tests Demo](https://drive.google.com/file/d/18Djzk3Tk8nhJvp0AIY13DoVDlW5oKQQ6/view?usp=sharing)
+
 ## Author
 
 👤 **Javier Alejandro Espinoza Castillo**

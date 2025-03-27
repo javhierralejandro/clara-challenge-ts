@@ -11,8 +11,41 @@
 ### 🏠 [Homepage](https://github.com/javhierralejandro/clara-challenge-ts)
 
 ## Project Structure
-> .gitignore package.json README.md tsconfig.json wdio.conf.ts allure-report/ ├── app.js ├── favicon.ico ├── index.html ├── styles.css ├── data/ ├── export/ ├── history/ ├── plugin/ └── widgets/ allure-results/ ├── *.png ├── *.json tests/ ├── features/ ├── pages/ └── steps/
-
+>allure-report/ <br>
+>allure-results/ <br>
+>>├── *.png <br>
+>>└── *.json <br>
+>
+>tests/ <br>
+>>├── features/ <br>
+>>>├── add_products_to_cart.steps.feature <br>
+>>>├── checkout_cart.steps.feature <br>
+>>>├── remove_products_from_cart.steps.feature <br>
+>>>└── sort_products.steps.feature <br>
+>>
+>>├── pages/ <br>
+>>>├── cart.page.ts <br>
+>>>├── catalog.page.ts <br>
+>>>├── checkout_address.page.ts <br>
+>>>├── checkout_complete.page.ts <br>
+>>>├── checkout_payment.page.ts <br>
+>>>├── checkout_place_order.page.ts <br>
+>>>├── login.page.ts <br>
+>>>├── menu.page.ts <br>
+>>>├── page.ts <br>
+>>>└── product.page.ts <br>
+>>
+>>└── steps/ <br>
+>>>├── add_products_to_cart.steps.ts <br>
+>>>├── checkout_cart.steps.ts <br>
+>>>├── remove_products_from_cart.steps.ts <br>
+>>>└── sort_products.steps.ts <br>
+>
+>.gitignore <br>
+>package.json <br>
+>README.md <br>
+>tsconfig.json <br>
+>wdio.conf.ts <br>
 
 
 ## Install

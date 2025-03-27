@@ -34,4 +34,26 @@ export class CartPage extends Page {
     async proceedToCheckout(): Promise<void> {
         await this.clickElement(this.CHECKOUT_BUTTON);
     }
+
+    async swipeBackToProducts(): Promise<void> {
+        const screenSize = await browser.getWindowRect();
+        const startX = screenSize.width / 2;
+        const startY = screenSize.height * 0.8;
+        const endY = screenSize.height * 0.2;
+    
+        await browser.performActions([
+          {
+            type: 'pointer',
+            id: 'finger1',
+            parameters: { pointerType: 'touch' },
+            actions: [
+              { type: 'pointerMove', duration: 0, x: startX, y: startY },
+              { type: 'pointerDown', button: 0 },
+              { type: 'pause', duration: 500 },
+              { type: 'pointerMove', duration: 800, x: startX, y: endY },
+              { type: 'pointerUp', button: 0 },
+            ],
+          },
+        ]);
+      }
 }    

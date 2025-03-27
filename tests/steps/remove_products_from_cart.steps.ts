@@ -22,6 +22,7 @@ Given('the user has at least one product in the cart', async function () {
     // Open the cart page
     await globalPage.openCart();
     cartPage = new CartPage();
+    await browser.takeScreenshot();
 });
 
 // Step definition for removing a product from the cart
@@ -29,6 +30,7 @@ When('the user clicks on Remove Item', async function () {
     // Remove the product from the cart
     await cartPage.removeItem();
     globalPage = new Page();
+    await browser.takeScreenshot();
 });
 
 // Step definition for verifying that the product was removed from the cart
@@ -45,4 +47,5 @@ Then('the product should be removed from cart', async function () {
     }
     
     expect(finalCartCount).toBeLessThan(initialCartCount);
+    await browser.takeScreenshot();
 });

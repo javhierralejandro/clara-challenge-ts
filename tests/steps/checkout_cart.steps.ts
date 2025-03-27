@@ -7,6 +7,7 @@ import { CheckoutPaymentPage } from '../pages/checkout_payment.page';
 import { CheckoutPlaceOrderPage } from '../pages/checkout_place_order.page';
 import { CheckoutCompletePage } from '../pages/checkout_complete.page';
 import { MenuPage } from '../pages/menu.page';
+import { browser } from '@wdio/globals';
 
 let globalPage: Page;
 let cartPage: CartPage;
@@ -33,12 +34,14 @@ Given('the user has at least one product in cart', async function () {
     // Open the cart page
     await globalPage.openCart();
     cartPage = new CartPage();
+    await browser.takeScreenshot();
 });
 
 // Step definition for proceeding to checkout
 When('the user proceeds to checkout', async function () {
     await cartPage.proceedToCheckout();
     loginPage = new LoginPage();
+    await browser.takeScreenshot();
 });
 
 // Step definition for logging in to proceed to checkout
@@ -47,6 +50,7 @@ When('the user logs in to proceed to checkout', async function () {
     await loginPage.enterPassword('10203040');
     await loginPage.clickLogin();
     checkoutAddressPage = new CheckoutAddressPage();
+    await browser.takeScreenshot();
 });
 
 // Step definition for entering shipping address
@@ -61,6 +65,7 @@ When('the user enters a shipping address', async function () {
 
     await checkoutAddressPage.proceedToPayment();
     checkoutPaymentPage = new CheckoutPaymentPage();
+    await browser.takeScreenshot();
 });
 
 // Step definition for entering payment method
@@ -86,12 +91,14 @@ When('the user enters a payment method', async function () {
     }
 
     checkoutPlaceOrderPage = new CheckoutPlaceOrderPage();
+    await browser.takeScreenshot();
 });
 
 // Step definition for placing the order
 When('the user places the order', async function () {
     await checkoutPlaceOrderPage.placeOrder();
     checkoutCompletePage = new CheckoutCompletePage();
+    await browser.takeScreenshot();
 });
 
 // Step definition for verifying that the checkout is completed
@@ -101,6 +108,7 @@ Then('the products checkout should be completed', async function () {
         throw new Error(`Checkout completion failed. Expected "Checkout Complete", but found "${checkoutCompletionText}"`);
     }
 
+    await browser.takeScreenshot();
     // Continue shopping
     await checkoutCompletePage.continueShopping();
 
@@ -117,6 +125,7 @@ Then('the products checkout should be completed', async function () {
         await menuPage.clickLogout();
     }
     
+    await browser.takeScreenshot();
 
     // Handle logout request alert
     if (await driver.getAlertText()!= null) {

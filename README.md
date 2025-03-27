@@ -104,10 +104,3 @@ npx allure open
 
 * Github: [@javhierralejandro](https://github.com/javhierralejandro)
 * LinkedIn: [@ing-jaec \(Javier Alejandro Espinoza Castillo\)](https://linkedin.com/in/ing-jaec \(Javier Alejandro Espinoza Castillo\))
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

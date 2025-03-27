@@ -103,4 +103,4 @@ npx allure open
 👤 **Javier Alejandro Espinoza Castillo**
 
 * Github: [@javhierralejandro](https://github.com/javhierralejandro)
-* LinkedIn: [@ing-jaec \(Javier Alejandro Espinoza Castillo\)](https://linkedin.com/in/ing-jaec \(Javier Alejandro Espinoza Castillo\))
+* LinkedIn: [@ing-jaec](https://linkedin.com/in/ing-jaec)
